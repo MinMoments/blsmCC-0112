@@ -12,8 +12,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        flex-direction: column;
       }
 
       .card {
@@ -21,8 +24,10 @@
         border-radius: 16px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 2rem;
-        width: 340px;
+        width: 100%;
+        max-width: 360px;
         text-align: center;
+        box-sizing: border-box;
       }
 
       .profile-img {
@@ -31,14 +36,14 @@
         border-radius: 50%;
         background-color: #d6ecec;
         display: inline-block;
-        background-position: center center; /* Ensure image stays centered */
+        background-image: url("Beatrice - Bio Link.PNG");
+        background-position: center 45%; /* Adjust if forehead is cut off */
         background-size: cover;
-        margin-bottom: 1rem;
-        margin-top: 20px;
+        margin: 1.5rem auto;
       }
 
       .name {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 0.25rem;
         color: #333;
@@ -46,25 +51,28 @@
 
       .title {
         color: #666;
-        font-size: 0.95rem;
+        font-size: 1rem;
         margin-bottom: 1.5rem;
       }
 
       .info {
         text-align: left;
         margin: 0 auto 1.5rem;
-        font-size: 0.95rem;
+        font-size: 1rem;
+        max-width: 260px;
       }
 
       .info p {
         margin: 0.5rem 0;
         display: flex;
         align-items: center;
+        word-wrap: break-word;
       }
 
       .info p span {
         margin-left: 0.5rem;
         word-break: break-word;
+        flex: 1;
       }
 
       .save-button {
@@ -74,26 +82,49 @@
         padding: 10px 20px;
         border-radius: 32px;
         cursor: pointer;
-        font-size: 0.95rem;
+        font-size: 1rem;
         transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 260px;
       }
 
       .save-button:hover {
         background-color: #4b1e1e;
       }
 
-      .icon {
-        width: 20px;
+      /* 📱 Mobile Tweaks */
+      @media (max-width: 480px) {
+        .card {
+          padding: 1.5rem 1rem;
+        }
+        @media (max-height: 600px) {
+          body {
+            align-items: flex-start;
+            padding-top: 2rem;
+          }
+        }
+
+        .profile-img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .name {
+          font-size: 1.3rem;
+        }
+
+        .title,
+        .info,
+        .save-button {
+          font-size: 0.95rem;
+        }
       }
     </style>
   </head>
   <body>
     <div class="card">
       <!-- 👤 Profile image -->
-      <div
-        class="profile-img"
-        style="background-image: url('Beatrice - Bio Link.PNG')"
-      ></div>
+      <div class="profile-img"></div>
 
       <div class="name">Beatrice Lai</div>
       <div class="title">Planner & Founder</div>
