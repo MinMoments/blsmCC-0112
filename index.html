@@ -23,11 +23,16 @@
         background-color: #f8f0e8;
         border-radius: 16px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         width: 100%;
         max-width: 360px;
-        text-align: center;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; /* ✅ This centers content horizontally */
         box-sizing: border-box;
+        text-align: center; /* Optional: Keep text centered too */
       }
 
       .profile-img {
@@ -63,10 +68,12 @@
       }
 
       .info p {
-        margin: 0.5rem 0;
+        margin: 0.8rem 0; /* increased from 0.5rem */
         display: flex;
         align-items: center;
-        word-wrap: break-word;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       .info p span {
@@ -144,18 +151,24 @@
   </head>
   <body>
     <div class="card">
-      <!-- 👤 Profile image -->
-      <div class="profile-img"></div>
+      <!-- Top Section -->
+      <div>
+        <div
+          class="profile-img"
+          style="background-image: url('Beatrice - Bio Link.PNG')"
+        ></div>
+        <div class="name">Beatrice Lai</div>
+        <div class="title">Planner & Founder</div>
+      </div>
 
-      <div class="name">Beatrice Lai</div>
-      <div class="title">Planner & Founder</div>
-
+      <!-- Middle Section -->
       <div class="info">
         <p>📞 <span>+6011 6178 7928</span></p>
         <p>✉️ <span>hello.minmoments@gmail.com</span></p>
         <p>🔗 <span>Website Coming Soon</span></p>
       </div>
 
+      <!-- Bottom Section -->
       <a href="Beatrice Contact.vcf" download>
         <button class="save-button">💾 Save Contact Data</button>
       </a>
