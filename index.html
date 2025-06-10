@@ -123,11 +123,20 @@
           height: auto;
           overflow-y: auto;
         }
-        .name,
-        .title,
+        .info p {
+          margin: 0.5rem 0;
+          display: flex;
+          align-items: center;
+          overflow: hidden; /* Prevents wrapping */
+          white-space: nowrap; /* Ensures one-line only */
+          text-overflow: ellipsis; /* Adds "..." if needed */
+        }
+
         .info p span {
-          white-space: nowrap;
+          margin-left: 0.5rem;
+          flex: 1; /* Allows span to fill remaining space */
           overflow: hidden;
+          white-space: nowrap;
           text-overflow: ellipsis;
         }
       }
