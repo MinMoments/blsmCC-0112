@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Contact Card - Beatrice Lai</title>
     <style>
       body {
@@ -42,7 +44,6 @@
         backdrop-filter: blur(4px);
       }
 
-      /* Watermark image */
       .card::before {
         content: "";
         position: absolute;
@@ -57,6 +58,7 @@
         z-index: 0;
         pointer-events: none;
       }
+
       .profile-img,
       .name,
       .title,
@@ -66,8 +68,6 @@
       }
 
       .top-banner {
-        position: relative;
-
         height: 100px;
         background-image: url("Torn paper.png");
         background-size: cover;
@@ -117,13 +117,15 @@
         text-decoration: none;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
       }
+
       .button:hover {
-        background: #b6c5b3; /* Contrasting color */
+        background: #b6c5b3;
         color: #111;
         transform: scale(1.05);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         border: 1px solid rgba(0, 0, 0, 0.2);
       }
+
       .button.disabled {
         pointer-events: none;
         opacity: 0.5;
@@ -131,6 +133,46 @@
         color: #aaa;
         cursor: not-allowed;
         backdrop-filter: blur(12px);
+      }
+
+      /* RESPONSIVE STYLES */
+      @media screen and (max-width: 400px) {
+        .card {
+          width: 90%;
+          padding: 1.5rem 1rem 2.5rem;
+        }
+
+        .profile-img {
+          width: 90px;
+          height: 90px;
+          margin-top: -45px;
+        }
+
+        .name {
+          font-size: 1.1rem;
+        }
+
+        .title {
+          font-size: 0.85rem;
+        }
+
+        .button {
+          width: 90%;
+          font-size: 0.9rem;
+          padding: 10px 16px;
+        }
+
+        .top-banner {
+          height: 80px;
+          background-size: contain;
+        }
+
+        .card::before {
+          width: 200px;
+          height: 200px;
+          left: 60%;
+          top: 50%;
+        }
       }
     </style>
   </head>
