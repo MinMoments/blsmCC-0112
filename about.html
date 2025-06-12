@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Beatrice Lai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(-45deg, #f0f0f5, #e4e4e8, #e6f1ec, #f8f0e8);
+        background-size: 400% 400%;
+        animation: gradientShift 12s ease infinite;
+        color: #222;
+        padding: 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes slideUpFade {
+        0% {
+          transform: translateY(40px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 3rem auto 0 auto;
+        background: #ffffffcc;
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(6px);
+        animation: slideUpFade 0.8s ease-out forwards;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.25rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: #555;
+        margin: 0.75rem 0; /* default spacing for other h2s */
+      }
+
+      .tight-top {
+        margin-top: 0.3rem; /* reduced top spacing */
+        margin-bottom: 1.5rem; /* keep bottom spacing unchanged */
+      }
+
+      .section {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-direction: row;
+      }
+
+      .section:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .section img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .section p {
+        flex: 1;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      @media (max-width: 640px) {
+        .section {
+          flex-direction: column !important;
+          align-items: center;
+        }
+
+        .section img {
+          width: 100%;
+          height: auto;
+        }
+
+        .section p {
+          margin-top: 1rem;
+        }
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 12px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        color: #000;
+        text-decoration: none;
+        font-size: 0.95rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: #b6c5b3;
+        color: #111;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Beatrice (Bea) Lai</h1>
+      <h2>Co-Founder & Planner of 敏 | Min Moments</h2>
+      <h2 class="tight-top">(aka your honorary Maid of Honor in disguise)</h2>
+
+      <div class="section">
+        <!--img src="bea1.jpg" alt="Bea smiling confidently"-->
+        <p>
+          Beatrice, better known as Bea, is the heart and hustle behind 敏 | Min
+          Moments, a planner by title, but as she puts it, a true “One Leg Kick
+          All” in spirit. She co-founded the company with Jess while planning
+          her own wedding and navigating firsthand the stress, decision fatigue,
+          and budget puzzles so many couples face.
+        </p>
+      </div>
+
+      <div class="section">
+        <!--img src="bea2.jpg" alt="Bea smiling confidently"-->
+        <p>
+          That personal experience became the foundation for what she wanted to
+          offer others: genuine support, honest advice, and thoughtful planning
+          that helps couples actually enjoy the process. Still in the midst of
+          her own wedding journey, Bea brings fresh empathy and a clear sense of
+          what matters most, the people, the memories, and the feeling of being
+          taken care of.
+        </p>
+      </div>
+
+      <div class="section">
+        <!--img src="bea3.jpg" alt="Bea smiling confidently"-->
+        <p>
+          She’s a unique mix of Type A and Type B: organized enough to keep
+          every detail in check, flexible enough to pivot when things change,
+          and always on the lookout for a great deal that tries to not
+          compromise the dream. Fiercely loyal and emotionally grounded, Bea
+          treats every event like it’s for someone she loves. Because if you’re
+          her client, that’s pretty much how she sees you.
+        </p>
+      </div>
+
+      <div class="section">
+        <p>
+          Her goal is simple: to help your guests have a good time, and to make
+          sure you, THE COUPLE, have a great time. Through it all, Bea stays
+          true to the mission she shares with Jess: to bring ease and happiness
+          to every celebration, one beautiful human moment at a time.
+        </p>
+      </div>
+
+      <a href="index.html" class="back-button">← Back to Contact Card</a>
+    </div>
+  </body>
+</html>
